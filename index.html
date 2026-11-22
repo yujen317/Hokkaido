@@ -142,7 +142,7 @@ a{color:var(--blue)}
 <nav class="quick">
   <a href="#members">👥 成員</a><a href="#flights">✈️ 航班</a><a href="#hotels">🏨 住宿</a><a href="#itin">🗓️ 行程</a><a href="#route">🗺️ 路線圖</a><a href="#tomamu">🏔️ 星野攻略</a>
   <a href="#fx">💴 匯率</a><a href="#milk">🥛 牛乳</a><a href="#ledger">🧾 記帳</a><a href="#shop">🛍️ 購物</a><a href="#tax">📄 退稅</a>
-  <a href="#wear">🧥 穿搭</a><a href="#eat">🍜 必吃必買</a><a href="#souvenir">🎁 伴手禮</a><a href="#jp">🗣️ 日文</a><a href="#saved">📌 收藏清單</a>
+  <a href="#eat">🍜 必吃必買</a><a href="#souvenir">🎁 伴手禮</a><a href="#jp">🗣️ 日文</a><a href="#saved">📌 收藏清單</a>
 <a href="#coupons">🎟️ 優惠券</a>
 </nav>
 
@@ -312,30 +312,6 @@ a{color:var(--blue)}
   </ul>
 </section>
 
-<section id="wear">
-  <h2>🧥 穿搭與實用提示</h2>
-  <ul>
-    <li><b>星野、美瑛</b>：中筒防水雪靴，體感可能低於 -12°C。</li>
-    <li><b>旭山動物園</b>：厚羊毛襪＋暖暖包。</li>
-    <li><b>札幌、小樽</b>：白天融雪、傍晚結冰，走路小碎步。</li>
-    <li>洋蔥式穿搭：內層發熱衣（避免純棉）＋中層毛衣／刷毛＋外層防風防水外套，室內脫外套。</li>
-    <li>拍照配色：避免全白外套（雪地會融成一片），建議焦糖棕、酒紅、薑黃、寶藍，或亮色圍巾毛帽。</li>
-    <li>結冰路面：小碎步、全腳掌著地。</li>
-    <li>行動電源一律隨身，不可放託運或寄送行李。</li>
-  </ul>
-  <h3>📸 拍照小技巧</h3>
-  <ul>
-    <li><b>霧冰平台</b>：雪景會偏暗，曝光手動拉高 +0.3～+0.7。</li>
-    <li><b>水之教會</b>：夜間關閃光燈。</li>
-    <li><b>聖誕樹之木</b>：用 2x／3x 長焦拍。</li>
-    <li><b>白金青池、白鬚瀑布</b>：16:15–16:45 藍調時刻最好看。</li>
-    <li><b>旭山動物園企鵝</b>：4K 60fps、低角度錄影。</li>
-  </ul>
-  <h3>日文小卡</h3>
-  <div id="phrases"></div>
-  <p class="muted">翻譯：<a href="https://papago.naver.com/">Papago</a>　<a href="https://papago.naver.com/?sk=zh-TW&tk=ko">Papago 中→韓</a>　<a href="https://translate.google.com/">Google 翻譯</a></p>
-</section>
-
 <section id="eat">
   <h2>🍜 必吃・必買・必拍</h2>
   <h3>星野 TOMAMU</h3><p>SORA 鮭魚親子丼、hal 長腳蟹腳、Kumo Cafe 棉花糖熱飲<br><span class="pill gold">必買</span> 星野農場鮮奶、優格飲</p>
@@ -388,6 +364,7 @@ a{color:var(--blue)}
   <div class="jpc"><div class="jpz">我身體不舒服</div><div class="notr jpj">気分が悪いです</div><div class="notr jpk">きぶんが わるいです</div><div class="jpr">kibun ga warui desu</div><button class="copy speak" data-s="気分が悪いです">🔊</button><button class="copy" data-c="気分が悪いです">複製</button></div>
   <div class="jpc"><div class="jpz">我想去醫院</div><div class="notr jpj">病院に行きたいです</div><div class="notr jpk">びょういんに いきたいです</div><div class="jpr">byouin ni ikitai desu</div><button class="copy speak" data-s="病院に行きたいです">🔊</button><button class="copy" data-c="病院に行きたいです">複製</button></div>
   <div class="jpc"><div class="jpz">我的錢包不見了</div><div class="notr jpj">財布をなくしました</div><div class="notr jpk">さいふを なくしました</div><div class="jpr">saifu o nakushimashita</div><button class="copy speak" data-s="財布をなくしました">🔊</button><button class="copy" data-c="財布をなくしました">複製</button></div>
+  <p class="muted">翻譯：<a href="https://papago.naver.com/">Papago</a>　<a href="https://papago.naver.com/?sk=zh-TW&tk=ko">Papago 中→韓</a>　<a href="https://translate.google.com/">Google 翻譯</a></p>
   <div class="box red" style="font-size:14px"><b>緊急電話：警察 <span>110</span>・救護車／消防 <span>119</span></b></div>
 </section>
 
@@ -910,8 +887,8 @@ try{speechSynthesis.getVoices()}catch(e){}
 
 // ---------- phrases ----------
 const PH=[['請問廁所在哪裡？','トイレはどこですか？'],['可以免稅嗎？','免税できますか？'],['請給我這個','これをください'],['可以刷卡嗎？','カードで払えますか？'],['我們有預約','予約しています'],['不要辣／不要香菜','辛くしないでください／パクチー抜きで']];
-$('phrases').innerHTML=PH.map(([z,j])=>`<div class="ledger-row"><div>${z}<br><b>${j}</b></div><button class="copy" data-j="${j}">複製</button></div>`).join('');
-$('phrases').querySelectorAll('button').forEach(b=>b.onclick=()=>copyText(b.dataset.j));
+if($('phrases'))$('phrases').innerHTML=PH.map(([z,j])=>`<div class="ledger-row"><div>${z}<br><b>${j}</b></div><button class="copy" data-j="${j}">複製</button></div>`).join('');
+if($('phrases'))$('phrases').querySelectorAll('button').forEach(b=>b.onclick=()=>copyText(b.dataset.j));
 
 
 // ---------- falling snow ----------
