@@ -140,7 +140,7 @@ a{color:var(--blue)}
 
 <div class="wrap">
 <nav class="quick">
-  <a href="#members">👥 成員</a><a href="#flights">✈️ 航班</a><a href="#hotels">🏨 住宿</a><a href="#itin">🗓️ 行程</a><a href="#route">🗺️ 路線圖</a><a href="#otaru">⚓ 小樽散策</a><a href="#tomamu">🏔️ 星野攻略</a>
+  <a href="#members">👥 成員</a><a href="#flights">✈️ 航班</a><a href="#hotels">🏨 住宿</a><a href="#itin">🗓️ 行程</a><a href="#route">🗺️ 路線圖</a><a href="#tomamu">🏔️ 星野攻略</a><a href="#otaru">⚓ 小樽散策</a>
   <a href="#fx">💴 匯率</a><a href="#milk">🥛 牛乳</a><a href="#ledger">🧾 記帳</a><a href="#shop">🛍️ 購物</a><a href="#tax">📄 退稅</a>
   <a href="#eat">🍜 必吃必買</a><a href="#souvenir">🎁 伴手禮</a><a href="#jp">🗣️ 日文</a><a href="#saved">📌 收藏清單</a>
 <a href="#coupons">🎟️ 優惠券</a>
@@ -227,6 +227,13 @@ a{color:var(--blue)}
   <p class="muted" style="margin-top:10px">車程為一般路況估算，冬季下雪可能多 20–30% 時間；包車時間以司機安排為準。</p>
 </section>
 
+<section id="tomamu">
+  <h2>🏔️ 星野 TOMAMU 攻略（12/9–12/11）</h2>
+  <p class="muted">左右滑動翻頁，或按下方按鈕。</p>
+  <div class="flip" id="flip"></div>
+  <div class="flipnav"><button class="btn ghost small" id="flipPrev">← 上一頁</button><div class="dots" id="flipDots"></div><button class="btn ghost small" id="flipNext">下一頁 →</button></div>
+</section>
+
 <section id="otaru">
   <h2>⚓ 小樽散策地圖（D5）</h2>
   <svg viewBox="0 0 360 330" width="100%" role="img" aria-label="小樽散策路線示意圖" style="display:block">
@@ -254,13 +261,6 @@ a{color:var(--blue)}
   <ul class="rt"><li class="stop"><span class="dot">🚉</span><span class="nm"><span class="tm">10:07</span><b>JR 小樽站</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=JR%E5%B0%8F%E6%A8%BD%E9%A7%85" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 出站走 1 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm">10:15</span><b>① 三角市場 海鮮早午餐</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E8%A7%92%E5%B8%82%E5%A0%B4%20%E5%B0%8F%E6%A8%BD" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 走中央通往運河，轉進堺町通 約 15 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm">12:00</span><b>② 北菓樓 小樽本館（泡芙、開拓米菓）</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E8%8F%93%E6%A5%BC%20%E5%B0%8F%E6%A8%BD%E6%9C%AC%E9%A4%A8" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 堺町通往南 約 3 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm"></span><b>③ 北一硝子三號館（玻璃、油燈咖啡）</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E4%B8%80%E7%A1%9D%E5%AD%90%E4%B8%89%E5%8F%B7%E9%A4%A8" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 約 3 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm"></span><b>④ 六花亭 小樽運河店</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E5%85%AD%E8%8A%B1%E4%BA%AD%20%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3%E5%BA%97" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 約 5 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm"></span><b>⑤ LeTAO 本店（起司蛋糕）</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%82%BF%E3%82%AA%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 過馬路即到</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm"></span><b>⑥ 小樽音樂盒堂本館・メルヘン交差點</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%82%E6%9C%AC%E9%A4%A8" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 沿運河往北 約 15 分</span></li><li class="stop"><span class="dot">•</span><span class="nm"><span class="tm">16:00</span><b>⑦ 淺草橋・小樽運河點燈拍照</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E6%B5%85%E8%8D%89%E6%A9%8B%20%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3" target="_blank" rel="noopener">📍地圖</a></span></li><li class="leg"><span>🚶 中央通回車站 約 10 分</span></li><li class="stop"><span class="dot">🚉</span><span class="nm"><span class="tm">17:00</span><b>JR 小樽站 → 快速 Airport 150 號回札幌</b><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=JR%E5%B0%8F%E6%A8%BD%E9%A7%85" target="_blank" rel="noopener">📍地圖</a></span></li></ul>
   <a class="btnlink" href="https://www.google.com/maps/dir/?api=1&origin=JR%E5%B0%8F%E6%A8%BD%E9%A7%85&destination=JR%E5%B0%8F%E6%A8%BD%E9%A7%85&waypoints=%E4%B8%89%E8%A7%92%E5%B8%82%E5%A0%B4%20%E5%B0%8F%E6%A8%BD%7C%E5%8C%97%E8%8F%93%E6%A5%BC%20%E5%B0%8F%E6%A8%BD%E6%9C%AC%E9%A4%A8%7C%E5%8C%97%E4%B8%80%E7%A1%9D%E5%AD%90%E4%B8%89%E5%8F%B7%E9%A4%A8%7C%E5%85%AD%E8%8A%B1%E4%BA%AD%20%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3%E5%BA%97%7C%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%82%E6%9C%AC%E9%A4%A8%7C%E6%B5%85%E8%8D%89%E6%A9%8B%20%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3&travelmode=walking" target="_blank" rel="noopener">🗺️ 用 Google 地圖看小樽步行路線</a>
   <p class="muted" style="margin-top:10px">堺町通下午很多店 17:00–18:00 關門，想買的先買；傍晚路面會結冰，走慢一點。</p>
-</section>
-
-<section id="tomamu">
-  <h2>🏔️ 星野 TOMAMU 攻略（12/9–12/11）</h2>
-  <p class="muted">左右滑動翻頁，或按下方按鈕。</p>
-  <div class="flip" id="flip"></div>
-  <div class="flipnav"><button class="btn ghost small" id="flipPrev">← 上一頁</button><div class="dots" id="flipDots"></div><button class="btn ghost small" id="flipNext">下一頁 →</button></div>
 </section>
 
 <section id="fx">
