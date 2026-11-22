@@ -421,21 +421,6 @@ header.hero h1,header.hero .sub,.count,.once{text-shadow:0 1px 6px rgba(10,20,40
   <p class="muted">匯率請自行依當天銀行／刷卡匯率修改，會記在這台手機上。</p>
 </section>
 
-<section id="fund">
-  <h2>🏦 公費基金</h2>
-  <p>每人收 <b>¥40,000</b>（7 人），實算 <b>¥29,572</b>；每人多收的 ¥10,428 當餐費公費。</p>
-  <table>
-    <tr><th>公費支出</th><th style="text-align:right">金額</th></tr>
-    <tr><td>D1 接機包車（機場 → 永旺 → 星野）</td><td style="text-align:right">¥50,000</td></tr>
-    <tr><td>D3 美瑛包車（星野 → 美瑛 → 旭川）</td><td style="text-align:right">¥80,000</td></tr>
-    <tr><td>D4 旭川札幌包車（動物園 → SHIRO → 札幌）</td><td style="text-align:right">¥70,000</td></tr>
-    <tr><td>D4 旭山動物園門票（¥1,000 × 7 人）</td><td style="text-align:right">¥7,000</td></tr>
-    <tr><td><b>合計</b></td><td style="text-align:right"><b>¥207,000</b></td></tr>
-  </table>
-  <div id="fundList"></div>
-  <p class="muted">點選標記已繳；記錄只存在這台手機。</p>
-</section>
-
 <section id="ledger">
   <h2>🧾 共同記帳</h2>
   <div class="grid2">
@@ -692,6 +677,7 @@ $('jpy').oninput=()=>fx('jpy');$('twd').oninput=()=>fx('twd');$('rate').oninput=
 const FIRST=['洹','吉','lin','勲','丹','臻','歐巴'], ALL=[...FIRST,'德','歐'];
 let paid=store.get('paid',{});
 function renderFund(){
+  if(!$('fundList'))return;
   $('fundList').innerHTML=ALL.map(m=>`<label class="check ${paid[m]?'done':''}"><input type="checkbox" data-m="${m}" ${paid[m]?'checked':''}><span>${m}</span><small class="muted" style="margin-left:auto">${paid[m]?'已繳':'未繳'}</small></label>`).join('');
   $('fundList').querySelectorAll('input').forEach(c=>c.onchange=()=>{paid[c.dataset.m]=c.checked;store.set('paid',paid);renderFund()});
 }
