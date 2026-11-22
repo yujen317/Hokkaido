@@ -82,6 +82,14 @@ button.btn.small{padding:4px 10px;font-size:12px}
 footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
 a{color:var(--blue)}
 
+.veh text{animation:vbob 2.4s ease-in-out infinite}
+.veh text:nth-child(2n){animation-delay:-1.2s}
+.veh text:nth-child(3n){animation-delay:-.6s}
+@keyframes vbob{50%{transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.veh text{animation:none}}
+.rt .leg span{font-size:13px}
+.rt .leg span::first-letter{font-size:18px}
+
 .jpc{position:relative;border-bottom:1px solid var(--line);padding:10px 108px 10px 0}
 .jpz{font-size:13px;color:var(--soft,#5f7186)}
 .jpj{font-size:19px;font-weight:700;margin-top:2px}
@@ -218,8 +226,19 @@ a{color:var(--blue)}
   <circle cx="40" cy="134" r="7" fill="#2f6fb2"/><text x="14" y="120">⚓ 小樽</text>
   </g>
   <g font-size="10" fill="#5f7186">
+  <g font-size="17" class="veh">
+  <text x="122" y="208">🚐</text>
+  <text x="194" y="146">🚐</text>
+  <text x="240" y="70" font-size="14">🚐</text>
+  <text x="200" y="104">🚐</text>
+  <text x="146" y="140">🚐</text>
+  <text x="58" y="142">🚃</text>
+  <text x="62" y="198">🚌</text>
+  <text x="18" y="262" font-size="20">✈️</text>
+  <text x="170" y="182" font-size="15">🚡</text>
+  </g>
   <text x="120" y="232">D1 約1.5h</text><text x="218" y="150">D3 約1h40m</text><text x="268" y="84">D3</text>
-  <text x="200" y="72">D4 包車</text><text x="130" y="148">D4</text><text x="8" y="168">D5 JR 34分</text><text x="46" y="208">D6 巴士</text>
+  <text x="200" y="72">D4 包車</text><text x="130" y="148">D4</text><text x="8" y="168">D5 JR 34分</text><text x="22" y="216">D6 巴士</text>
   </g></svg>
   <p class="muted" style="margin:6px 0 10px">示意圖，非實際比例。點下方每天看停靠點、車程與交通方式。</p>
   <div class="days" id="routeTabs"></div>
